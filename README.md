@@ -8,6 +8,13 @@ phone = "Phone must be a valid phone number"
 ```
 
 ## BACKEND-APP 
+#### Entity
+```
+private Long id;
+private String name;
+private String email;
+private String phone;
+```
 ### List Endpoint User :
 #### [POST] AddUser : http://localhost:8080/api/users
 RequestMessage :
@@ -35,7 +42,7 @@ RequestMessage :
 #### [GET] generateReport : http://localhost:8080/reports/export-report
 #### [GET] generateReportById : http://localhost:8080/reports/export-report/{userId}
 
-## FRONT-END
+## FRONTEND-APP
 ### List URL :
 #### UsersView : http://localhost:8080/users
 #### AddUserView : http://localhost:8080/add-user
