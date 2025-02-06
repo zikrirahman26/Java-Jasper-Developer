@@ -19,6 +19,7 @@ private String phone;
 #### [POST] AddUser : http://localhost:8080/api/users
 RequestMessage :
 #### [POST] AddUser : `http://localhost:8080/api/users`
+```Request Body```
 ```json
 {
     "name": "name",
@@ -26,12 +27,38 @@ RequestMessage :
     "phone": "082200119922"
 }
 ```
+```Response Body```
+```json
+{
+  "data": {
+    "id": 1,
+    "name": "name",
+    "email": "email@gmail.com",
+    "phone": "082200119922"
+  },
+  "message": "success add user"
+}
+```
+
 #### [PUT] UpdateUser : http://localhost:8080/api/users/{userId}
+```Request Body```
 ```json
 {
     "name": "name1",
     "email": "email1@gmail.com",
     "phone": "082200119923"
+}
+```
+```Response Body```
+```json
+{
+  "data": {
+    "id": 1,
+    "name": "name1",
+    "email": "email1@gmail.com",
+    "phone": "082200119923"
+  },
+  "message": "success update user"
 }
 ```
 #### [GET] GetAllUsers : http://localhost:8080/api/users
@@ -67,10 +94,14 @@ spring.jpa.hibernate.ddl-auto=update
 ## REPORT JASPER
 ### TOOLS JASPERSOFT STUDIO
 ```
-Print AllUsers
+Download AllUsers
 path : /resources/reports/report-users.jrxml
 
-Print UserById
+Download UserById
 path : /resources/reports/report-user-by-id.jrxml
+
+Output File
+AllUsers : ReportAllUser_{yyyyMMddHHmmss}.pdf
+UserById : ReportUser_{yyyyMMddHHmmss}.pdf
 ```
 
